@@ -20,10 +20,15 @@ let g:tagbar_sort = 0
 
 "Have vim know JSON type
 au BufRead,BufNewFile *.json set filetype=json 
+"Have vim know Handlebars type
+au BufRead,BufNewFile *.handlebars,*.hbs set ft=handlebars
+"Have vim know Markdown type
+au BufRead,BufNewFile *.md,*.mkd set ft=markdown
 
 autocmd FileType coffee setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType cucumber setlocal shiftwidth=2 softtabstop=2 tabstop=2 
 autocmd FileType python setlocal shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType markdown setlocal shiftwidth=4 softtabstop=4 tabstop=4
 
 "Prevent Autoclose doubling my whitespace
 let g:AutoCloseExpandSpace = 0
